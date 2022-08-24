@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -59,12 +60,12 @@ const Home: NextPage = () => {
 
       <Container className="py-4">
         <header className="pb-3 mb-4 border-bottom">
-          <a
+          <Link
             href="/"
             className="d-flex align-items-center text-dark text-decoration-none"
           >
-            <span className="fs-4">Goldwire, ogni contatto è d'oro</span>
-          </a>
+            <span className="fs-4">Goldwire, ogni contatto &egrave; d&apos;oro</span>
+          </Link>
         </header>
 
         <div className="p-5 mb-4 bg-light rounded-3">
@@ -128,22 +129,22 @@ const Home: NextPage = () => {
               <h3>who, when, where, why, what ?</h3>
               <hr />
               <p>
-                Goldwire è una rete di artigiani e creativi provenienti da tutto
+                Goldwire &egrave; una rete di artigiani e creativi provenienti da tutto
                 il mondo.
               </p>
               <p>
-                Il progetto Goldwire è nato nel 2019 da un’idea di alcuni
+                Il progetto Goldwire &egrave; nato nel 2019 da un’idea di alcuni
                 artigiani italo-stranieri.
               </p>
               <p>
-                La sede di Goldwire è il mondo intero: questa rete è nata per
+                La sede di Goldwire &egrave; il mondo intero: questa rete &egrave; nata per
                 abbattere ogni confine.
               </p>
               <p>
-                Lo scopo di Goldwire è unire realtà e culture differenti
+                Lo scopo di Goldwire &egrave; unire realtà e culture differenti
                 attraverso la condivisione di idee.
               </p>
-              <p>Goldwire è una vetrina per i tuoi prodotti e le tue idee.</p>
+              <p>Goldwire &egrave; una vetrina per i tuoi prodotti e le tue idee.</p>
             </div>
           </Col>
           <Col md={6}>
