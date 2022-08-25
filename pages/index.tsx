@@ -64,7 +64,7 @@ const Home: NextPage = () => {
             href="/"
             className="d-flex align-items-center text-dark text-decoration-none"
           >
-            <span className="fs-4">Goldwire, ogni contatto &egrave; d&apos;oro</span>
+            <span className="fs-4">Goldwire</span>
           </Link>
         </header>
 
@@ -84,10 +84,9 @@ const Home: NextPage = () => {
               Artigiani e creativi provenienti da tutto il mondo
             </h1>
             <p className="col-md-8 fs-4">
-              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat.
+              Goldwire &egrave; una rete di artigiani e creativi provenienti da tutto il mondo.
+              Una vetrina per i tuoi prodotti e le tue idee.<br/>
+              Condividi con noi la tua storia!
             </p>
           </div>
         </div>
@@ -126,12 +125,8 @@ const Home: NextPage = () => {
         <Row className="align-items-md-stretch">
           <Col md={6}>
             <div className="h-100 p-5 text-white bg-dark rounded-3">
-              <h3>who, when, where, why, what ?</h3>
+              <h3>Da quanto?</h3>
               <hr />
-              <p>
-                Goldwire &egrave; una rete di artigiani e creativi provenienti da tutto
-                il mondo.
-              </p>
               <p>
                 Il progetto Goldwire &egrave; nato nel 2019 da un’idea di alcuni
                 artigiani italo-stranieri.
@@ -140,22 +135,16 @@ const Home: NextPage = () => {
                 La sede di Goldwire &egrave; il mondo intero: questa rete &egrave; nata per
                 abbattere ogni confine.
               </p>
+            </div>
+          </Col>
+          <Col md={6}>
+            <div className="h-100 p-5 bg-warning border rounded-3">
+              <h2>La nostra mission</h2>
               <p>
                 Lo scopo di Goldwire &egrave; unire realtà e culture differenti
                 attraverso la condivisione di idee.
               </p>
               <p>Goldwire &egrave; una vetrina per i tuoi prodotti e le tue idee.</p>
-            </div>
-          </Col>
-          <Col md={6}>
-            <div className="h-100 p-5 bg-warning border rounded-3">
-              <h2>Contattaci</h2>
-              <p>Optio cumque nihil impedit quo minus</p>
-              <p>
-                Paceat facere possimus, omnis voluptas assumenda est, omnis
-                dolor repellendus. Temporibus autem quibusdam et aut officiis
-                debitis aut rerum necessitatibus.
-              </p>
             </div>
           </Col>
         </Row>
