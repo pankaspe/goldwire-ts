@@ -140,6 +140,7 @@ const Home: NextPage = () => {
           <Col md={6}>
             <div className="h-100 p-5 bg-warning border rounded-3">
               <h2>La nostra mission</h2>
+              <hr />
               <p>
                 Lo scopo di Goldwire &egrave; unire realtà e culture differenti
                 attraverso la condivisione di idee.
