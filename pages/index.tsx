@@ -153,7 +153,9 @@ const Home: NextPage = () => {
           </Col>
         </Row>
 
-        <footer className="pt-3 mt-4 text-muted border-top">&copy; 2021</footer>
+        <footer className="pt-3 mt-4 text-muted border-top">
+          &copy; 2021 <Link href="https://www.iubenda.com/privacy-policy/96671216">privacy policy</Link>
+        </footer>
       </Container>
     </>
   );
