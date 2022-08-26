@@ -11,6 +11,8 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
 import heroImg from "../public/hero.svg";
+import logo from "../public/logo.jpg";
+
 import { useState } from "react";
 
 const Home: NextPage = () => {
@@ -60,12 +62,13 @@ const Home: NextPage = () => {
 
       <Container className="py-4">
         <header className="pb-3 mb-4 border-bottom">
-          <Link
-            href="/"
-            className="d-flex align-items-center text-dark text-decoration-none"
-          >
-            <span className="fs-4">Goldwire</span>
-          </Link>
+          <Image
+              src={logo}
+              alt="Goldwire ts"
+              quality={100}
+              width={130}
+              height={80}
+            />
         </header>
 
         <div className="p-5 mb-4 bg-light rounded-3">
