@@ -64,44 +64,39 @@ const Home: NextPage = () => {
                />
             </SimpleGrid>
 
-            {/*
+            {/* */}
             <Text textAlign={'center'} color={'gray.700'} fontWeight={500} fontSize={{ base: '4xl' }}>
                Il team
             </Text>
 
-            <SimpleGrid textAlign={'center'} columns={{sm: 2, md: 3 }} spacing={8} >
+            <SimpleGrid textAlign={'center'} columns={{sm: 2, md: 5 }} spacing={8} boxShadow={'lg'} >
                <SocialProfileWithImage 
                   name={websiteConfig.team.founder.name} 
                   profileImage={websiteConfig.team.founder.avatar}
                   role={websiteConfig.team.founder.role}
-                  url={websiteConfig.team.founder.url}
                />
                <SocialProfileWithImage 
                   name={websiteConfig.team.coFounder.name} 
                   profileImage={websiteConfig.team.coFounder.avatar}
                   role={websiteConfig.team.coFounder.role}
-                  url={websiteConfig.team.coFounder.url}
                />
                <SocialProfileWithImage 
                   name={websiteConfig.team.dev.name} 
                   profileImage={websiteConfig.team.dev.avatar}
                   role={websiteConfig.team.dev.role}
-                  url={websiteConfig.team.dev.url}
                />
                <SocialProfileWithImage 
                   name={websiteConfig.team.president.name} 
                   profileImage={websiteConfig.team.president.avatar}
                   role={websiteConfig.team.president.role}
-                  url={websiteConfig.team.president.url}
                />
                <SocialProfileWithImage 
                   name={websiteConfig.team.adminEvent.name} 
                   profileImage={websiteConfig.team.adminEvent.avatar}
                   role={websiteConfig.team.adminEvent.role}
-                  url={websiteConfig.team.adminEvent.url}                 
                />
             </SimpleGrid>
-            */}
+            {/* */}
 
          </Container>
 

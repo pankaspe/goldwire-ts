@@ -60,25 +60,28 @@ const Hero: React.FC<Hero> = ({ title, subTitle }) => {
             <Stack
                as={Box}
                textAlign={'center'}
-               spacing={{ base: 8, md: 14 }}
+               spacing={{ base: 6, md: 10 }}
                py={{ base: 16, md: 20 }}
             >
                
-               <Heading
-                  as={'h1'}
-                  fontWeight={700}
-                  fontSize={{ base: '4xl', md: '6xl' }}
-                  lineHeight={'110%'}
-                  color={'yellow.500'}
-               >
-                  {title}
+               <Heading as={'h1'}>
+                  <ChakraImage
+                     alt={title}
+                     src={'/logo-gw.png'}
+                     width={420}
+                     height={230}
+                     quality={100}
+                     placeholder="blur"
+                     blurDataURL={'/logo-gw.png'}
+                  />
                </Heading>
+
                <Text
                   as={'h2'}
                   fontWeight={600}
                   fontSize={{ base: '3xl', md: '5xl' }}
                   lineHeight={'110%'}
-                  color={'grey.900'}
+                  color={'yellow.500'}
                >
                   {subTitle}
                </Text>
