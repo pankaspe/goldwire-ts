@@ -47,7 +47,7 @@ const Home: NextPage = () => {
                {websiteConfig.homepage.intro}
             </Text>
 
-            <SimpleGrid pb={24} columns={{sm: 1, md: 2}} spacing={8}>
+            <SimpleGrid pb={12} columns={{sm: 1, md: 2}} spacing={8}>
                <LandingCard 
                   bgColor="yellow.500" 
                   textColor="white" 
@@ -63,7 +63,7 @@ const Home: NextPage = () => {
                   body={websiteConfig.homepage.cards.two} 
                />
             </SimpleGrid>
-            
+
             {/*
             <Text textAlign={'center'} color={'gray.700'} fontWeight={500} fontSize={{ base: '4xl' }}>
                Il team
