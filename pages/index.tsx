@@ -4,6 +4,7 @@ import { Container, SimpleGrid, Box, Heading, Text } from '@chakra-ui/react'
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import SocialProfileWithImage from "../components/Card";
+import Features from "../components/Features";
 import websiteConfig from "../config/website";
 
 {/* @ define custom card for this page */}
@@ -47,6 +48,7 @@ const Home: NextPage = () => {
                {websiteConfig.homepage.intro}
             </Text>
 
+            {/* @ info box */}
             <SimpleGrid pb={12} columns={{sm: 1, md: 2}} spacing={8}>
                <LandingCard 
                   bgColor="yellow.500" 
@@ -63,13 +65,21 @@ const Home: NextPage = () => {
                   body={websiteConfig.homepage.cards.two} 
                />
             </SimpleGrid>
+            {/* @ end info box */}
 
-            {/* */}
+            {/* @ faq box */}
+            <Features
+               title={websiteConfig.faq.title}
+               dataBody={websiteConfig.faq.dataBody}
+            />
+            {/* @ end faq box */}
+
+            {/* @ team box */}
             <Text textAlign={'center'} color={'gray.700'} fontWeight={500} fontSize={{ base: '4xl' }}>
                Il team
             </Text>
 
-            <SimpleGrid textAlign={'center'} columns={{sm: 2, md: 5 }} spacing={8} boxShadow={'lg'} >
+            <SimpleGrid textAlign={'center'} columns={{sm: 2, md: 5 }} spacing={8}>
                <SocialProfileWithImage 
                   name={websiteConfig.team.founder.name} 
                   profileImage={websiteConfig.team.founder.avatar}
@@ -96,7 +106,7 @@ const Home: NextPage = () => {
                   role={websiteConfig.team.adminEvent.role}
                />
             </SimpleGrid>
-            {/* */}
+            {/* @ end team box */}
 
          </Container>
 
