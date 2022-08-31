@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import ChakraImage from '../helper/chakraImage';
+import people from '../public/multicultural.svg';
 
 import {
    Box,
@@ -80,6 +82,16 @@ const Hero: React.FC<Hero> = ({ title, subTitle }) => {
                >
                   {subTitle}
                </Text>
+
+               <ChakraImage
+                  alt={people}
+                  src={people}
+                  width={720}
+                  height={280}
+                  quality={100}
+                  placeholder="blur"
+                  blurDataURL={people}
+               />
 
                <Stack
                   direction={'column'}
