@@ -61,7 +61,7 @@ const Hero: React.FC<Hero> = ({ title, subTitle }) => {
                as={Box}
                textAlign={'center'}
                spacing={{ base: 6, md: 10 }}
-               py={{ base: 16, md: 20 }}
+               py={{ base: 6, md: 10 }}
             >
                
                <Heading as={'h1'}>
