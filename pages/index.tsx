@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { Container, SimpleGrid, Box, Heading, Text } from '@chakra-ui/react'
 
+import Seo from "../components/Seo";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import SocialProfileWithImage from "../components/Card";
@@ -37,6 +38,10 @@ const LandingCard: React.FC<ILandingCard> = (props) => {
 const Home: NextPage = () => {
    return(
       <>
+         <Seo
+            title={websiteConfig.meta.title}
+            description={websiteConfig.meta.subTitle}
+         />
          <Hero 
             title={websiteConfig.meta.title}
             subTitle={websiteConfig.meta.subTitle}
