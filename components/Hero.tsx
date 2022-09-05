@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import ChakraImage from '../helper/chakraImage';
-import people from '../public/multicultural.svg';
 
 import {
    Box,
@@ -12,7 +11,6 @@ import {
    Input,
    Alert,
    AlertIcon,
-   AlertTitle,
    AlertDescription,
 } from '@chakra-ui/react';
 
@@ -27,7 +25,7 @@ const AlertMessage: React.FC<IMessage> = (props) => {
       <>
          <Alert status={props.status} variant='subtle'>
             <AlertIcon />
-            {props.message}
+            <AlertDescription>{props.message}</AlertDescription>
          </Alert>
       </>
    )
@@ -109,13 +107,13 @@ const Hero: React.FC<Hero> = ({ title, subTitle }) => {
                </Text>
 
                <ChakraImage
-                  alt={people}
-                  src={people}
+                  alt="Goldwire"
+                  src={'/hero.svg'}
                   width={720}
                   height={280}
                   quality={100}
                   placeholder="blur"
-                  blurDataURL={people}
+                  blurDataURL={'/hero.svg'}
                />
 
                <Stack
