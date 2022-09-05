@@ -25,18 +25,18 @@ const Hero: React.FC<Hero> = ({ title, subTitle }) => {
 
    const [email, setEmail] = useState("");
    const [message, setMessage] = useState(null || "");
-   // const [className, setClassName] = useState(""); // CHAKRA qui è lo stato per il className
+   const [className, setClassName] = useState(null || ""); // CHAKRA qui è lo stato per il className
  
    const handleEmailChange = (e: any) => {
      setEmail(e.target.value);
      setMessage("")
-     // setClassName("")
+     setClassName("")
    }
  
    const handleSubmit = async () => {
      if (!/\S+@\S+\.\S+/.test(email)) {
        setMessage("Email non valida!");
-       // setClassName("error"); // CHAKRA se non è valido allora metto come classe .error
+       setClassName("error"); // CHAKRA se non è valido allora metto come classe .error
        return;
      }
      const res = await fetch('/api/subscriber/add', {
@@ -51,10 +51,10 @@ const Hero: React.FC<Hero> = ({ title, subTitle }) => {
      const data = await res.json()
      if (data.error) {
        setMessage("Email già presente nella lista di attesa!");
-       // setClassName("error"); // CHAKRA stessa cosa .error
+       setClassName("info"); // CHAKRA stessa cosa .error
      } else {
        setMessage("Email inserita nella lista di attesa!");
-       // setClassName("success"); // CHAKRA e qui metto .success
+       setClassName("success"); // CHAKRA e qui metto .success
      }
      // CHAKRA error ha un'outline rossa, success invece verde
    }
@@ -110,7 +110,7 @@ const Hero: React.FC<Hero> = ({ title, subTitle }) => {
                >
 
                 {message ?
-                  <Alert status='info'>
+                  <Alert status={className}>
                      <AlertIcon />
                      <AlertDescription>{message}</AlertDescription>
                   </Alert>
