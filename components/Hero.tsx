@@ -16,6 +16,7 @@ import {
    AlertDescription,
 } from '@chakra-ui/react';
 
+{/* @  custon alert message */}
 interface IMessage {
    status: any,
    message: string
@@ -31,7 +32,7 @@ const AlertMessage: React.FC<IMessage> = (props) => {
       </>
    )
 }
-{/* @ end custom card */}
+{/* @ end custon alert message */}
 
 export interface Hero {
    title: string,
