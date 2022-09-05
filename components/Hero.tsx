@@ -16,6 +16,23 @@ import {
    AlertDescription,
 } from '@chakra-ui/react';
 
+interface IMessage {
+   status: any,
+   message: string
+}
+
+const AlertMessage: React.FC<IMessage> = (props) => {
+   return(
+      <>
+         <Alert status={props.status} variant='subtle'>
+            <AlertIcon />
+            {props.message}
+         </Alert>
+      </>
+   )
+}
+{/* @ end custom card */}
+
 export interface Hero {
    title: string,
    subTitle: string,
@@ -25,18 +42,18 @@ const Hero: React.FC<Hero> = ({ title, subTitle }) => {
 
    const [email, setEmail] = useState("");
    const [message, setMessage] = useState(null || "");
-   const [className, setClassName] = useState(null || ""); // CHAKRA qui è lo stato per il className
+   const [statusName, setStatusName] = useState(null || "");
  
    const handleEmailChange = (e: any) => {
      setEmail(e.target.value);
      setMessage("")
-     setClassName("")
+     setStatusName("")
    }
  
    const handleSubmit = async () => {
      if (!/\S+@\S+\.\S+/.test(email)) {
        setMessage("Email non valida!");
-       setClassName("error"); // CHAKRA se non è valido allora metto come classe .error
+       setStatusName("error"); 
        return;
      }
      const res = await fetch('/api/subscriber/add', {
@@ -51,12 +68,11 @@ const Hero: React.FC<Hero> = ({ title, subTitle }) => {
      const data = await res.json()
      if (data.error) {
        setMessage("Email già presente nella lista di attesa!");
-       setClassName("info"); // CHAKRA stessa cosa .error
+       setStatusName("info"); 
      } else {
        setMessage("Email inserita nella lista di attesa!");
-       setClassName("success"); // CHAKRA e qui metto .success
+       setStatusName("success"); 
      }
-     // CHAKRA error ha un'outline rossa, success invece verde
    }
    
    return(
@@ -109,16 +125,10 @@ const Hero: React.FC<Hero> = ({ title, subTitle }) => {
                   w={'full'}
                >
 
-                {message ?
-                  <Alert status={className}>
-                     <AlertIcon />
-                     <AlertDescription>{message}</AlertDescription>
-                  </Alert>
-                  : null }
+                  {message ? <AlertMessage status={statusName} message={message} /> : null }
 
                   <Stack direction={{ base: 'column', md: 'row' }} w={'full'}>
-                     {/* CHAKRA non capisco come mai non legge "message" */}
-                     {/* CHAKRA qui è l'input cui gli passo className={className} */}
+
                      <Input
                         onChange={handleEmailChange}
                         type={'email'}
