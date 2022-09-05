@@ -51,7 +51,7 @@ const websiteConfig = {
       president: {
          name: "Chiara S.",
          role: "President & Copywriter",
-         avatar: '/img/team/profile.jpg',
+         avatar: '/img/team/chiara.jpg',
       },
       adminEvent: {
          name: "Diego L.",
