@@ -110,9 +110,8 @@ const Hero: React.FC<Hero> = ({ title, subTitle }) => {
                >
 
                 {message ?
-                  <Alert status='error'>
+                  <Alert status='info'>
                      <AlertIcon />
-                     <AlertTitle>Errore!</AlertTitle>
                      <AlertDescription>{message}</AlertDescription>
                   </Alert>
                   : null }
